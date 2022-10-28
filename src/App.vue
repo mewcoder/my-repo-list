@@ -10,7 +10,7 @@ import PageContent from './components/page-content.vue';
 
 <style>
 body {
-  @apply bg-white text-gray-900;
+  @apply bg-gray-100 text-gray-900;
 }
 .dark body {
   @apply bg-dark-800 text-white;

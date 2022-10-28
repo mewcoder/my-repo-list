@@ -1,6 +1,7 @@
 import { reactive } from 'vue';
 
-export function useStore() {
-  const state = reactive({});
-  return state;
-}
+const state = reactive({
+  repoList: []
+});
+
+export default state;

@@ -12,12 +12,11 @@ const handleClick = (url) => {
 </script>
 
 <template>
-  <div
-    class="py-3 px-4 w-1/4 border border-light-500 rounded shadow cursor-pointer hover:shadow-lg transition duration-200 dark:bg-dark-100 dark:border-dark-100 dark:text-gray-200 dark:hover:shadow-gray-800"
-    @click="handleClick(data.url)"
-  >
+  <div class="repo-card" @click="handleClick(data.url)">
     <div class="text-lg">{{ data.name }}</div>
-    <div class="my-2 truncate">{{ data.description }}</div>
+    <div class="my-2 truncate" :title="data.description">
+      {{ data.description }}
+    </div>
     <div class="inline-flex items-center">
       <div class="i-carbon-star"></div>
       <div class="ml-1">{{ data.stars }}</div>
@@ -25,4 +24,10 @@ const handleClick = (url) => {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.repo-card {
+  @apply py-3 px-4 rounded-lg cursor-pointer bg-white transition duration-200;
+  @apply shadow-md  hover:shadow-xl;
+  @apply dark:bg-dark-100  dark:text-gray-200 dark:hover:shadow-gray-800;
+}
+</style>

@@ -1,10 +1,11 @@
 <script setup>
 import { ref } from 'vue';
+import { topics } from '../../config';
 
 const emit = defineEmits(['change']);
 
-const tabs = ['vue', 'algorithm'];
-const curTab = ref('');
+const tabs = ['all', ...topics];
+const curTab = ref('all');
 
 const handleClick = (val) => {
   curTab.value = val;
