@@ -28,7 +28,8 @@ export function fetchRepoList(useCache = false) {
         description: item.description,
         url: item.html_url,
         stars: item.stargazers_count,
-        topics: item.topics
+        topics: item.topics,
+        homepage: item.homepage
         // language: item.language,
         // forks: item.forks_count,
       }));

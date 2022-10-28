@@ -17,9 +17,14 @@ const handleClick = (url) => {
     <div class="my-2 truncate" :title="data.description">
       {{ data.description }}
     </div>
-    <div class="inline-flex items-center">
+    <div class="inline-flex items-center space-x-2">
       <div class="i-carbon-star"></div>
       <div class="ml-1">{{ data.stars }}</div>
+      <div
+        v-if="data.homepage"
+        class="i-carbon-link cursor-pointer"
+        @click.stop="handleClick(data.homepage)"
+      ></div>
     </div>
   </div>
 </template>
