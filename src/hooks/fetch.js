@@ -19,7 +19,7 @@ export function fetchRepoList(useCache = false) {
       console.warn('get my-repo-list-cache error:', e);
     }
   }
-
+  state.loading = true;
   fetch(getListUrl(user))
     .then((r) => r.json())
     .then((r) => {
@@ -34,10 +34,12 @@ export function fetchRepoList(useCache = false) {
         // forks: item.forks_count,
       }));
       state.repoList = list;
+      state.loading = false;
       localStorage.setItem(CACHE_KEY, JSON.stringify(list));
     })
     .catch((e) => {
       console.error('fetch repo list error:', e);
+      state.loading = false;
       state.repoList = [];
     });
 }
