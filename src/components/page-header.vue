@@ -26,11 +26,11 @@ const refresh = () => {
         @click="refresh()"
       />
 
-      <button
+      <a
         class="i-carbon-logo-github text-2xl dark:text-white cursor-pointer"
         :href="`https://github.com/${user}`"
         target="_blank"
-      ></button>
+      ></a>
 
       <button
         class="i-carbon-sun dark:i-carbon-moon text-2xl dark:text-white cursor-pointer"
