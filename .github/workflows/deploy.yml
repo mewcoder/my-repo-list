@@ -22,7 +22,7 @@ jobs:
       - name: Install & Build
       - uses: creepinson/pnpm-action@master
         with:
-        arguments: '["install", "build"]'
+          arguments: '["install", "build"]'
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
