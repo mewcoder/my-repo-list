@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy Action
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout Repo
         uses: actions/checkout@v2
 
       - name: Setup Node
