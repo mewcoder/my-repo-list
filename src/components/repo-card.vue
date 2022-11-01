@@ -22,6 +22,7 @@ const handleClick = (url) => {
       <div class="ml-1">{{ data.stars }}</div>
       <div
         v-if="data.homepage"
+        title="homepage"
         class="i-carbon-link cursor-pointer"
         @click.stop="handleClick(data.homepage)"
       ></div>
@@ -34,5 +35,6 @@ const handleClick = (url) => {
   @apply py-3 px-4 rounded-lg cursor-pointer bg-white transition duration-200;
   @apply shadow-md  hover:shadow-xl;
   @apply dark:bg-dark-100  dark:text-gray-200 dark:hover:shadow-gray-800;
+  @apply hover:-translate-y-1.5;
 }
 </style>

@@ -1,6 +1,8 @@
 <script setup>
 import { useDark, useToggle } from '@vueuse/core';
 import { fetchRepoList } from '../hooks/fetch';
+import { user } from '../../config';
+
 const isDark = useDark();
 const toggleDark = useToggle(isDark);
 
@@ -11,7 +13,12 @@ const refresh = () => {
 
 <template>
   <header class="font-mono px-6 flex justify-between">
-    <h2 class="text-indigo-500 text-4xl font-extrabold">My Repo List</h2>
+    <a
+      class="text-indigo-500 text-4xl py-4 font-extrabold cursor-pointer no-underline"
+      :href="`https://github.com/${user}?tab=/repositories`"
+      target="_blank"
+      >My Repo List</a
+    >
     <div class="py-6 flex space-x-2">
       <button
         class="i-carbon-rotate-360 dark:i-carbon-rotate-360 text-2xl dark:text-white cursor-pointer"
@@ -21,7 +28,7 @@ const refresh = () => {
 
       <button
         class="i-carbon-logo-github text-2xl dark:text-white cursor-pointer"
-        href="https://github.com/mewcoder"
+        :href="`https://github.com/${user}`"
         target="_blank"
       ></button>
 
@@ -32,5 +39,3 @@ const refresh = () => {
     </div>
   </header>
 </template>
-
-<style scoped></style>
