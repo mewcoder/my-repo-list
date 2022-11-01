@@ -19,11 +19,13 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
 
       - name: Build project
-        run: npm run build
+        run: pnpm install
+        run: pnpm build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
