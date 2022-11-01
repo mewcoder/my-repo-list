@@ -11,8 +11,8 @@ export const user = 'mewcoder';
 export const topics = ['open','demo','study','backup'];
 
 ```
-我所用的标签说明：
-- open 开源
-- demo 练习
-- study 学习
-- backup 备份
+> 我所用的标签说明：
+> - open 开源
+> - demo 练习
+> - study 学习
+> - backup 备份
